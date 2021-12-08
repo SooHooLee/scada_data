@@ -35,26 +35,6 @@ if __name__ == '__main__' :
     scada_data = pd.read_csv(file)
     # df = get_data(file)
     st.dataframe(scada_data)
-    # streamlit显示数据
-    # st.sidebar.subheader('* 时间步长 *')
-    # st.subheader('* 时间步长 *')
-    # freq = st.sidebar.selectbox("请选择时间步长", ('15min', '1s', '1min', '1h', '1d'))
-    # if freq == '15min':
-    #     data_file = "data/scada_data_15min.csv"
-    #     scada_data = pd.read_csv(data_file)  # Time作为引索
-    #     st.write('选择的时间步长为：', freq)
-    #     st.dataframe(scada_data)  # streamlit显示数据
-    # elif freq == '1h':
-    #     data_file = "data/scada_data_1h.csv"
-    #     scada_data = pd.read_csv(data_file)
-    #     st.write('选择的时间步长为：', freq)
-    #     st.dataframe(scada_data)  # streamlit显示数据
-    # elif freq == '1d':
-    #     data_file = "data/scada_data_1d.csv"
-    #     scada_data = pd.read_csv(data_file)
-    #     st.write('选择的时间步长为：', freq)
-    #     st.dataframe(scada_data)  # streamlit显示数据
-    # ---------------------------选择时间序列-----------------------
     st.sidebar.subheader('* 时间序列 *')
     st.subheader('* 时间序列 *')
     options = np.array(scada_data['real_time']).tolist()
